@@ -62,7 +62,7 @@ Made with ❤️ by Bhargav Rathod
 
 Enjoying this project? Help me make more awesome stuff!
 
-<a href="https://www.buymeacoffee.com/yourusername" target="_blank">
+<a href="https://coff.ee/bhargavratp" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="40" >
 </a>
 
