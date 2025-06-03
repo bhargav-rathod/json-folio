@@ -1,7 +1,6 @@
-# JsonFolio - Your Personal Portfolio in Minutes 🚀
+# JsonFolio - Your Personal & Cool Portfolio in Minutes 🚀
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://app.netlify.com/sites/YOUR_SITE_NAME/deploys)
-![GitHub stars](https://img.shields.io/github/stars/bhargav-rathod/JsonFolio?style=social)
+![GitHub stars](https://img.shields.io/github/stars/bhargav-rathod/json-folio?style=social)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 **JsonFolio** is a lightweight, customizable portfolio template that lets you create a stunning personal website by simply editing a JSON file. Built with Next.js and Tailwind CSS, it's fast, responsive, and easy to deploy. No multiple redeployments.
@@ -49,7 +48,7 @@ Visit http://localhost:3000 to see your portfolio!
 
 
 ## Json Configuration
-For a complete example, check out the [sample portfolio.json][https://github.com].
+For a complete example, check out the [sample portfolio.json](https://raw.githubusercontent.com/bhargav-rathod/json-folio/refs/heads/main/archived/data.json).
 
 ## 🤝 Contributing
 Contributions are welcome! Please open an issue or submit a PR for any improvements.
