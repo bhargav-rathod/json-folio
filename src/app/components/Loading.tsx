@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion";
 
-export default function Loading() {
+interface LoadingProps {
+  text?: string;
+}
+
+export default function Loading({ text = "Crafting Portfolio" }: LoadingProps) {
   const circles = [0, 1, 2];
 
   return (
@@ -41,7 +45,7 @@ export default function Loading() {
               repeat: Infinity
             }}
           >
-            Crafting Portfolio
+            {text}
           </motion.span>
         </motion.div>
       </div>

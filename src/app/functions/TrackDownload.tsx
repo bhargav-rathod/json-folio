@@ -1,3 +1,5 @@
+import { TrackingConfig } from "../types/portfolio-data.type";
+
 export const trackDownload = async (trackingConfig: TrackingConfig) => {
   try {
     if (!trackingConfig?.enabled) return;

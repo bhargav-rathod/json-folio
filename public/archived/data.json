@@ -1,0 +1,686 @@
+{
+    "meta": {
+        "title": "John Deo - Portfolio",
+        "description": "Full-Stack Developer & AI Enthusiast building scalable applications.",
+        "favicon": "/favicon.ico"
+    },
+    "header": {
+        "enabled": true,
+        "logo": {
+            "text": ""
+        },
+        "navLinks": [
+            {
+                "label": "About",
+                "section": "about",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Skills",
+                "section": "skills",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Publications",
+                "section": "publications",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Experience",
+                "section": "experience",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Projects",
+                "section": "portfolio",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Education",
+                "section": "education",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Achievements",
+                "section": "achievements",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Testimonials",
+                "section": "testimonials",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            },
+            {
+                "label": "Contact",
+                "section": "contact",
+                "navEligibleForDesktop": true,
+                "navEligibleForMobile": true
+            }
+        ]
+    },
+    "codeElements": [
+        {
+            "text": "console.log('Hello World')",
+            "x": 5,
+            "y": 15,
+            "delay": 0
+        },
+        {
+            "text": "function innovate()",
+            "x": 85,
+            "y": 35,
+            "delay": 0.3
+        },
+        {
+            "text": "const passion = 'coding'",
+            "x": 25,
+            "y": 65,
+            "delay": 0.5
+        },
+        {
+            "text": "return <Success />",
+            "x": 65,
+            "y": 85,
+            "delay": 0.7
+        },
+        {
+            "text": "// Keep building",
+            "x": 15,
+            "y": 5,
+            "delay": 0.9
+        },
+        {
+            "text": "if (problem) { solve() }",
+            "x": 70,
+            "y": 45,
+            "delay": 1.1
+        }
+    ],
+    "intro": {
+        "index": 1,
+        "enabled": true,
+        "tagline": "< Hello, I'm John Deo />",
+        "professional": "{Full-Stack Developer}",
+        "description": "I'm a passionate <b>Full-Stack Developer</b> with expertise in building modern web applications using <b>React, Node.js, and cloud technologies</b>. I believe in writing <b>clean, maintainable code</b> and creating <b>scalable architectures</b> that stand the test of time.\n\nMy journey includes working with <b>startups and enterprises</b>, where I've delivered <b>end-to-end solutions</b> from concept to deployment. I specialize in <b>microservices architecture, real-time applications, and AI integration</b>.\n\nBeyond coding, I actively contribute to <b>open-source projects</b> and write technical articles on <b>system design, best practices, and emerging technologies</b>. I'm always excited to tackle <b>complex challenges</b> and collaborate on <b>innovative projects</b> that make an impact.",
+        "avatar": {
+            "enabled": false,
+            "image": "/john-doe-avatar.gif",
+            "alt": "John Deo 3D Avatar"
+        },
+        "cta": {
+            "resumeUrl": "https://github.com/johndoe/storage/raw/main/John_Deo_Resume.pdf",
+            "buttonText": "Download Resume",
+            "resumeFileName": "John_Deo_Resume.pdf"
+        }
+    },
+    "stats": {
+        "enabled": true,
+        "items": [
+            {
+                "value": "5+",
+                "label": "Years Experience"
+            },
+            {
+                "value": "50+",
+                "label": "Projects Delivered"
+            },
+            {
+                "value": "10+",
+                "label": "Happy Clients"
+            },
+            {
+                "value": "3",
+                "label": "Cloud Certifications"
+            }
+        ]
+    },
+    "skills": {
+        "index": 2,
+        "enabled": true,
+        "title": "Technical Skills",
+        "highlight": "Skills",
+        "categories": [
+            {
+                "name": "Frontend",
+                "highlight": "Frontend",
+                "items": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Redux",
+                    "GraphQL",
+                    "Webpack",
+                    "Jest"
+                ]
+            },
+            {
+                "name": "Backend",
+                "highlight": "Backend",
+                "items": [
+                    "Node.js",
+                    "Python",
+                    "Express.js",
+                    "Django",
+                    "REST APIs",
+                    "Microservices",
+                    "Docker",
+                    "Kubernetes"
+                ]
+            },
+            {
+                "name": "Database",
+                "highlight": "Database",
+                "items": [
+                    "MongoDB",
+                    "PostgreSQL",
+                    "Redis",
+                    "MySQL",
+                    "Firebase",
+                    "Elasticsearch"
+                ]
+            },
+            {
+                "name": "Cloud & DevOps",
+                "highlight": "Cloud & DevOps",
+                "items": [
+                    "AWS",
+                    "Azure",
+                    "GCP",
+                    "CI/CD",
+                    "Terraform",
+                    "Jenkins",
+                    "Nginx"
+                ]
+            },
+            {
+                "name": "AI/ML",
+                "highlight": "AI/ML",
+                "items": [
+                    "TensorFlow",
+                    "PyTorch",
+                    "OpenAI API",
+                    "LangChain",
+                    "Computer Vision",
+                    "NLP"
+                ]
+            }
+        ]
+    },
+    "publications": {
+        "index": 3,
+        "enabled": true,
+        "title": "My Publications",
+        "highlight": "Publications",
+        "displayLimit": 3,
+        "showMoreText": "View All Articles",
+        "items": [
+            {
+                "title": "Building Scalable Microservices with Node.js",
+                "description": "A comprehensive guide on designing and implementing scalable microservices architecture using Node.js, Docker, and Kubernetes.",
+                "url": "https://johndoe.medium.com/building-scalable-microservices",
+                "platform": "Medium",
+                "date": "2024-01-15",
+                "type": "Technical Article",
+                "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7Q9I7K_7oNlOcLJkH6QK5g.png",
+                "tags": ["Node.js", "Microservices", "DevOps"]
+            },
+            {
+                "title": "React Performance Optimization Techniques",
+                "description": "Advanced techniques for optimizing React applications including code splitting, lazy loading, and memoization patterns.",
+                "url": "https://dev.to/johndoe/react-performance-optimization",
+                "platform": "Dev.to",
+                "date": "2023-11-20",
+                "type": "Tutorial",
+                "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--ABCD1234--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xyz123.png",
+                "tags": ["React", "Performance", "Frontend"]
+            },
+            {
+                "title": "AI-Powered Applications with LangChain",
+                "description": "How to build intelligent applications using LangChain, OpenAI APIs, and vector databases for context-aware AI solutions.",
+                "url": "https://johndoe.hashnode.dev/ai-powered-applications",
+                "platform": "Hashnode",
+                "date": "2023-09-10",
+                "type": "Blog",
+                "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1234567890/xyz.png",
+                "tags": ["AI", "LangChain", "OpenAI"]
+            },
+            {
+                "title": "Real-time Applications with WebSockets",
+                "description": "Building real-time features like chat, notifications, and live updates using WebSockets and Socket.io.",
+                "url": "https://johndoe.substack.com/p/real-time-applications",
+                "platform": "Substack",
+                "date": "2023-07-05",
+                "type": "Newsletter",
+                "image": "https://substackcdn.com/image/fetch/w_1200,h_600,c_limit,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-xyz.s3.amazonaws.com%2Fpublic%2Fimages%2Fabc123.png",
+                "tags": ["WebSockets", "Real-time", "Backend"]
+            },
+            {
+                "title": "Database Indexing Strategies",
+                "description": "Deep dive into database indexing, query optimization, and performance tuning for large-scale applications.",
+                "url": "https://johndoe.bearblog.dev/database-indexing",
+                "platform": "Bear Blog",
+                "date": "2023-05-15",
+                "type": "Technical Guide",
+                "image": "https://example.com/images/db-indexing.png",
+                "tags": ["Database", "Performance", "SQL"]
+            }
+        ]
+    },
+    "experience": {
+        "index": 4,
+        "enabled": true,
+        "title": "Work Experience",
+        "highlight": "Experience",
+        "items": [
+            {
+                "id": 1,
+                "title": "Senior Full-Stack Developer",
+                "period": "2022 - Present",
+                "company": "Tech Innovations Inc.",
+                "location": "San Francisco, CA",
+                "description": [
+                    "Led development of a SaaS platform serving 50K+ users using React, Node.js, and microservices architecture",
+                    "Implemented real-time features with WebSockets, reducing latency by 70%",
+                    "Mentored 5 junior developers and established coding standards",
+                    "Reduced deployment time by 60% through CI/CD pipeline optimization"
+                ],
+                "tags": ["React", "Node.js", "AWS", "Microservices", "Team Leadership"]
+            },
+            {
+                "id": 2,
+                "title": "Full-Stack Developer",
+                "period": "2020 - 2022",
+                "company": "Digital Solutions Ltd.",
+                "location": "New York, NY",
+                "description": [
+                    "Developed and maintained multiple client projects using MERN stack",
+                    "Built RESTful APIs handling 1M+ requests daily",
+                    "Integrated third-party services and payment gateways",
+                    "Improved application performance by 40% through optimization"
+                ],
+                "tags": ["MongoDB", "Express", "React", "REST APIs", "Payment Integration"]
+            },
+            {
+                "id": 3,
+                "title": "Junior Developer",
+                "period": "2019 - 2020",
+                "company": "Startup Ventures",
+                "location": "Austin, TX",
+                "description": [
+                    "Assisted in developing web applications using JavaScript and Python",
+                    "Participated in Agile sprints and code reviews",
+                    "Built responsive UI components and backend services",
+                    "Contributed to open-source projects"
+                ],
+                "tags": ["JavaScript", "Python", "Agile", "UI Development"]
+            }
+        ]
+    },
+    "education": {
+        "index": 5,
+        "enabled": true,
+        "title": "Education",
+        "highlight": "Education",
+        "items": [
+            {
+                "degree": "Master of Science",
+                "stream": "Computer Science",
+                "institute": "Stanford University",
+                "result": "GPA 3.9/4.0",
+                "duration": "2017 - 2019",
+                "location": "Stanford, CA"
+            },
+            {
+                "degree": "Bachelor of Technology",
+                "stream": "Information Technology",
+                "institute": "MIT",
+                "result": "GPA 3.8/4.0",
+                "duration": "2013 - 2017",
+                "location": "Cambridge, MA"
+            }
+        ]
+    },
+    "projects": {
+        "index": 6,
+        "enabled": true,
+        "title": "Featured Projects",
+        "highlight": "Projects",
+        "items": [
+            {
+                "title": "E-Commerce Platform",
+                "description": "Built a full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard. Supports 10K+ concurrent users.",
+                "githubLink": "https://github.com/johndoe/ecommerce-platform",
+                "liveLink": "https://demo-ecommerce.johndoe.com",
+                "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Redis"],
+                "type": "Full-Stack E-Commerce Solution"
+            },
+            {
+                "title": "AI Content Generator",
+                "description": "AI-powered content generation tool using GPT-4 and custom ML models. Features include plagiarism check, SEO optimization, and multi-language support.",
+                "githubLink": "https://github.com/johndoe/ai-content-generator",
+                "liveLink": "https://contentgen.johndoe.com",
+                "technologies": ["Python", "FastAPI", "React", "OpenAI", "PostgreSQL"],
+                "type": "AI/ML Application"
+            },
+            {
+                "title": "Real-time Collaboration Tool",
+                "description": "Google Docs-like real-time collaboration tool with live editing, comments, and version history. Built with operational transformation algorithm.",
+                "githubLink": "https://github.com/johndoe/collab-tool",
+                "liveLink": "https://collab.johndoe.com",
+                "technologies": ["Next.js", "Socket.io", "PostgreSQL", "Docker"],
+                "type": "Real-time Web Application"
+            },
+            {
+                "title": "Health Monitoring System",
+                "description": "IoT-based health monitoring system with wearable integration, real-time alerts, and doctor dashboard. HIPAA compliant.",
+                "githubLink": "https://github.com/johndoe/health-monitor",
+                "technologies": ["Python", "Django", "React Native", "AWS IoT", "MongoDB"],
+                "type": "IoT Healthcare Solution"
+            }
+        ]
+    },
+    "achievements": {
+        "index": 7,
+        "enabled": true,
+        "title": "Achievements & Certifications",
+        "highlight": "Achievements",
+        "description": [
+            "Awarded 'Developer of the Year' at Tech Innovations Inc. for outstanding contributions to platform architecture",
+            "Open-source contributor to major projects including React, Node.js, and TensorFlow",
+            "Speaker at international conferences including React Summit and AWS re:Invent",
+            "Maintained 100% on-time project delivery for 3 consecutive years"
+        ],
+        "certifications": [
+            {
+                "name": "AWS Solutions Architect Professional",
+                "issuer": "Amazon Web Services",
+                "icon": "/aws-cert.jpg",
+                "url": "https://www.credly.com/badges/abc123"
+            },
+            {
+                "name": "Google Cloud Professional Data Engineer",
+                "issuer": "Google Cloud",
+                "icon": "/gcp-cert.jpg",
+                "url": "https://www.credly.com/badges/def456"
+            },
+            {
+                "name": "React Advanced Certification",
+                "issuer": "Meta",
+                "icon": "/react-cert.jpg",
+                "url": "https://example.com/cert/react"
+            },
+            {
+                "name": "Machine Learning Specialization",
+                "issuer": "Stanford Online",
+                "icon": "/ml-cert.jpg",
+                "url": "https://coursera.org/verify/ml-specialization"
+            }
+        ]
+    },
+    "testimonials": {
+        "index": 8,
+        "enabled": true,
+        "title": "Client Testimonials",
+        "highlight": "Testimonials",
+        "items": [
+            {
+                "receivedFrom": "Sarah Johnson",
+                "designation": "CTO at TechCorp",
+                "linkedinUserName": "sarah-johnson-cto",
+                "message": "John delivered exceptional work on our enterprise platform. His technical expertise and attention to detail resulted in a 40% performance improvement. Highly recommended!"
+            },
+            {
+                "receivedFrom": "Mike Chen",
+                "designation": "Product Manager at StartupX",
+                "linkedinUserName": "mike-chen-pm",
+                "message": "Working with John was a game-changer for our product. He not only built robust features but also mentored our team. His code quality is outstanding."
+            },
+            {
+                "receivedFrom": "Emma Davis",
+                "designation": "CEO at InnovateLabs",
+                "linkedinUserName": "emma-davis-ceo",
+                "message": "John transformed our legacy system into a modern, scalable platform. His architectural decisions saved us thousands in infrastructure costs."
+            },
+            {
+                "receivedFrom": "David Wilson",
+                "designation": "Lead Developer at CloudSystems",
+                "linkedinUserName": "david-wilson-dev",
+                "message": "One of the most skilled developers I've worked with. John's ability to solve complex problems is exceptional. A true asset to any team."
+            }
+        ]
+    },
+    "contact": {
+        "index": 190,
+        "enabled": true,
+        "title": "Get In Touch",
+        "highlight": "Contact",
+        "email": "john.doe@example.com",
+        "phone": "+1 (555) 123-4567",
+        "location": "San Francisco, California, USA",
+        "socialLinks": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/johndoe",
+                "icon": "FiGithub"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/johndoe",
+                "icon": "FiLinkedin"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/johndoe",
+                "icon": "FiTwitter"
+            },
+            {
+                "name": "Medium",
+                "url": "https://medium.com/@johndoe",
+                "icon": "SiMedium"
+            },
+            {
+                "name": "Dev.to",
+                "url": "https://dev.to/johndoe",
+                "icon": "FaDev"
+            },
+            {
+                "name": "Email",
+                "url": "mailto:john.doe@example.com",
+                "icon": "FiMail"
+            },
+            {
+                "name": "Stack Overflow",
+                "url": "https://stackoverflow.com/users/johndoe",
+                "icon": "SiStackoverflow"
+            }
+        ]
+    },
+    "contactForm": {
+        "emailJsConfig": {
+            "serviceId": "service_abc123",
+            "templateId": "template_xyz789",
+            "publicKey": "user_public_key_here"
+        },
+        "formFields": {
+            "name": {
+                "label": "Your Name",
+                "placeholder": "Enter your full name"
+            },
+            "email": {
+                "label": "Email Address",
+                "placeholder": "your.email@example.com"
+            },
+            "phone": {
+                "label": "Phone Number",
+                "placeholder": "(123) 456-7890"
+            },
+            "subject": {
+                "label": "Subject",
+                "placeholder": "Project inquiry or collaboration"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Tell me about your project..."
+            }
+        },
+        "submitButton": {
+            "text": "Send Message",
+            "sendingText": "Sending..."
+        },
+        "successMessage": "Thank you! Your message has been sent successfully.",
+        "errorMessage": "Oops! Something went wrong. Please try again.",
+        "validationMessages": {
+            "name": "Please enter your name",
+            "email": "Please enter a valid email",
+            "messageMin": "Message is too short",
+            "messageMax": "Message is too long",
+            "subject": "Please enter a subject"
+        }
+    },
+    "quote": {
+        "index": 200,
+        "enabled": true,
+        "text": "The best way to predict the future is to invent it."
+    },
+    "footer": {
+        "enabled": true,
+        "text": "© {year} John Deo. All rights reserved."
+    },
+    "tracking": {
+        "enabled": true,
+        "googleAnalytics": {
+            "enabled": true,
+            "googleTag": "GA-123456789"
+        },
+        "googleForm": {
+            "enabled": true,
+            "actionUrl": "https://docs.google.com/forms/d/e/your-form-id/formResponse",
+            "fields": {
+                "timestamp": "entry.1234567890",
+                "eventType": "entry.0987654321",
+                "ipAddress": "entry.1122334455",
+                "userAgent": "entry.5566778899",
+                "country": "entry.6677889900",
+                "additionalData": "entry.7788990011"
+            }
+        },
+        "ipServices": {
+            "ipLookup": "https://api.ipify.org?format=json",
+            "geoLookup": "https://ipapi.co/{ip}/json/"
+        },
+        "sourceDetection": {
+            "ignoreParam": "ref",
+            "ignoreValue": "no-track",
+            "referrers": {
+                "linkedin": "linkedin",
+                "github": "github",
+                "twitter": "twitter",
+                "medium": "medium",
+                "stackoverflow": "stackoverflow"
+            },
+            "defaultSource": "direct"
+        }
+    },
+    "customSections": [
+        {
+            "index": 11,
+            "enabled": true,
+            "id": "currently-learning",
+            "title": "Currently Learning",
+            "description": "Technologies and concepts I'm currently exploring",
+            "type": "info",
+            "content": {
+                "list": [
+                    "Web3 & Blockchain Development",
+                    "Rust Programming Language",
+                    "Edge Computing",
+                    "Quantum Computing Basics"
+                ]
+            }
+        },
+        {
+            "index": 12,
+            "enabled": true,
+            "id": "open-source",
+            "title": "Open Source Contributions",
+            "description": "Projects I contribute to regularly",
+            "type": "links",
+            "content": {
+                "links": [
+                    {
+                        "label": "React Core",
+                        "url": "https://github.com/facebook/react",
+                        "description": "Contributor to React library"
+                    },
+                    {
+                        "label": "VS Code",
+                        "url": "https://github.com/microsoft/vscode",
+                        "description": "Extension development and bug fixes"
+                    },
+                    {
+                        "label": "TensorFlow.js",
+                        "url": "https://github.com/tensorflow/tfjs",
+                        "description": "ML in browser contributions"
+                    }
+                ]
+            }
+        },
+        {
+            "index": 13,
+            "enabled": true,
+            "id": "tech-stack",
+            "title": "Favorite Tech Stack",
+            "description": "My go-to technologies for different project types",
+            "type": "info",
+            "content": {
+                "list": [
+                    "Frontend: React + TypeScript + Tailwind",
+                    "Backend: Node.js + Express + PostgreSQL",
+                    "Mobile: React Native + Expo",
+                    "Cloud: AWS (EC2, S3, Lambda, RDS)"
+                ]
+            }
+        },
+        {
+            "index": 14,
+            "enabled": true,
+            "id": "newsletter",
+            "title": "Tech Insights Newsletter",
+            "eyebrow": "Weekly updates",
+            "description": "Get the latest on web development, AI trends, and career tips delivered to your inbox every Friday.",
+            "type": "newsletter",
+            "content": {
+                "newsletter": {
+                    "placeholder": "you@example.com",
+                    "ctaLabel": "Subscribe Now",
+                    "ctaUrl": "https://newsletter.johndoe.com/subscribe",
+                    "note": "No spam, unsubscribe anytime.",
+                    "pitch": "Join 5,000+ developers getting actionable insights every week.",
+                    "stats": [
+                        {
+                            "label": "Subscribers",
+                            "value": "5K+"
+                        },
+                        {
+                            "label": "Open Rate",
+                            "value": "68%"
+                        },
+                        {
+                            "label": "Years",
+                            "value": "2+"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

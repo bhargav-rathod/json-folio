@@ -1,10 +1,14 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Your custom styles below */
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+  --font-primary: var(--font-primary);
 }
 
 body {
@@ -14,6 +18,7 @@ body {
       transparent,
       rgb(var(--background-end-rgb))
     rgb(var(--background-start-rgb)));
+  font-family: var(--font-primary), system-ui, sans-serif;
 }
 
 .typing-demo {
@@ -32,4 +37,31 @@ body {
 
 @keyframes blink {
   50% { border-color: transparent }
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(17, 24, 39);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(139, 92, 246);
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(124, 58, 237);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(24, 24, 27);
+  border-radius: 5px;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(139, 92, 246) rgb(17, 24, 39);
 }
