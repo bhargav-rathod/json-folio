@@ -7,7 +7,7 @@
 
 **JsonFolio** is a lightweight, customizable portfolio template that lets you create a stunning personal website by simply editing a JSON file. Built with Next.js and Tailwind CSS, it's fast, responsive, and easy to deploy. No multiple redeployments.
 
-🔗 **Live Demo**: [https://bhargav-rathod.netlify.app](https://bhargav-rathod.netlify.app)
+🔗 **Live Demo**: [https://json-folio.netlify.app/](https://json-folio.netlify.app/)
 
 ## ✨ Features
 
