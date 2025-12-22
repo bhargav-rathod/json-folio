@@ -1,6 +1,12 @@
-interface TrackingConfig {
+// Type definitions for portfolio data
+export interface TrackingConfig {
   enabled: boolean;
+  googleAnalytics?: {
+    enabled: boolean;
+    googleTag: string;
+  };
   googleForm: {
+    enabled: boolean;
     actionUrl: string;
     fields: {
       timestamp: string;
@@ -23,7 +29,7 @@ interface TrackingConfig {
   };
 }
 
-interface ContactFormProps {
+export interface ContactFormProps {
   emailJsConfig: {
     serviceId: string;
     templateId: string;
@@ -51,8 +57,32 @@ interface ContactFormProps {
   };
 }
 
-// Type definitions
-type PortfolioData = {
+interface NavLink {
+  label: string;
+  section: string;
+  navEligibleForDesktop?: boolean;
+  navEligibleForMobile?: boolean;
+}
+
+interface CustomSectionContent {
+  richText?: string[];
+  list?: string[];
+  links?: { label: string; url: string; description?: string }[];
+  button?: { label: string; url: string; description?: string };
+  newsletter?: {
+    heading?: string;
+    subcopy?: string;
+    placeholder: string;
+    ctaLabel: string;
+    ctaUrl: string;
+    note?: string;
+    stats?: { label: string; value: string }[];
+    pitch?: string;
+  };
+  [key: string]: any;
+}
+
+export interface PortfolioData {
   meta: {
     title: string;
     description: string;
@@ -63,10 +93,7 @@ type PortfolioData = {
     logo: {
       text: string;
     };
-    navLinks: {
-      label: string;
-      section: string;
-    }[];
+    navLinks: NavLink[];
   };
   codeElements: {
     text: string;
@@ -76,6 +103,7 @@ type PortfolioData = {
   }[];
   intro: {
     enabled: boolean;
+    index?: number;
     tagline: string;
     professional: string;
     description: string;
@@ -99,6 +127,7 @@ type PortfolioData = {
   };
   skills: {
     enabled: boolean;
+    index?: number;
     title: string;
     highlight: string;
     categories: {
@@ -109,6 +138,7 @@ type PortfolioData = {
   };
   experience: {
     enabled: boolean;
+    index?: number;
     title: string;
     highlight: string;
     items: {
@@ -121,12 +151,46 @@ type PortfolioData = {
       tags: string[];
     }[];
   };
-  projects: {
+  education: {
     enabled: boolean;
+    index?: number;
     title: string;
     highlight: string;
     items: {
-      index: number;
+      degree: string;
+      stream: string;
+      institute: string;
+      result: string;
+      duration: string;
+      location: string;
+    }[];
+  };
+  publications: {
+    enabled: boolean;
+    index?: number;
+    title: string;
+    highlight: string;
+    displayLimit?: number;
+    showMoreText?: string;
+    loadingText?: string;
+    items: {
+      title: string;
+      description: string;
+      url: string;
+      platform: string;
+      date: string;
+      type: string;
+      image?: string;
+      tags: string[];
+      authors?: string;
+    }[];
+  };
+  projects: {
+    enabled: boolean;
+    index?: number;
+    title: string;
+    highlight: string;
+    items: {
       title: string;
       description: string;
       githubLink: string;
@@ -136,18 +200,33 @@ type PortfolioData = {
   };
   achievements: {
     enabled: boolean;
+    index?: number;
     title: string;
     highlight: string;
     description: string[];
     certifications: {
       name: string;
       issuer: string;
-      icon: string;
+      icon?: string;
+      url?: string;
+    }[];
+  };
+  testimonials: {
+    enabled: boolean;
+    index?: number;
+    title: string;
+    highlight: string;
+    items: {
+      receivedFrom: string;
+      designation: string;
+      linkedinUserName: string;
+      message: string;
     }[];
   };
   contactForm: ContactFormProps;
   contact: {
     enabled: boolean;
+    index?: number;
     title: string;
     highlight: string;
     email: string;
@@ -160,11 +239,22 @@ type PortfolioData = {
   };
   quote: {
     enabled: boolean;
+    index?: number;
     text: string;
   };
+  customSections?: Array<{
+    id: string;
+    title: string;
+    enabled: boolean;
+    index?: number;
+    type: 'info' | 'links' | 'button' | 'newsletter' | string;
+    description?: string;
+    eyebrow?: string;
+    content: CustomSectionContent;
+  }>;
   footer: {
     enabled: boolean;
     text: string;
   };
-  tracking: TrackingConfig
-};
+  tracking: TrackingConfig;
+}

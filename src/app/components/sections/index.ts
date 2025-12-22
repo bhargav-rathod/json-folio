@@ -1,0 +1,13 @@
+export { default as AboutSection } from './AboutSection';
+export { default as SkillsSection } from './SkillsSection';
+export { default as ExperienceSection } from './ExperienceSection';
+export { default as EducationSection } from './EducationSection';
+export { default as PublicationsSection } from './PublicationsSection';
+export { default as ProjectsSection } from './ProjectsSection';
+export { default as AchievementsSection } from './AchievementsSection';
+export { default as TestimonialsSection } from './TestimonialsSection';
+export { default as ContactSection } from './ContactSection';
+export { default as QuoteSection } from './QuoteSection';
+export { default as FooterSection } from './FooterSection';
+export { default as BackgroundAnimation } from './BackgroundAnimation';
+export { default as CustomSections } from "./CustomSections"; 

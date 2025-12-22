@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FiChevronLeft, FiChevronRight, FiGithub } from "react-icons/fi";
+import { parseText } from "../utils/textParser";
 
 // Project Carousel Component
 export const ProjectCarousel = ({ projects }: { projects: any[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const nextProject = () => {
     setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
@@ -14,8 +18,37 @@ export const ProjectCarousel = ({ projects }: { projects: any[] }) => {
     setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
 
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextProject();
+    }
+    if (isRightSwipe) {
+      prevProject();
+    }
+  };
+
   return (
-    <div className="overflow-hidden relative">
+    <div 
+      className="overflow-hidden relative"
+      ref={carouselRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <motion.div
         className="flex"
         animate={{
@@ -35,15 +68,15 @@ export const ProjectCarousel = ({ projects }: { projects: any[] }) => {
                 scale: currentIndex === index ? 1 : 0.9
               }}
               transition={{ duration: 0.5 }}
-              className={`bg-gray-800/50 rounded-xl border ${currentIndex === index ? 'border-purple-500' : 'border-gray-700'} p-6 shadow-lg transition-all duration-300`}
+              className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 shadow-lg transition-all duration-300 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">
+              <h3 className="text-lg md:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
+              <div className="text-sm sm:text-base md:text-lg text-gray-300 mb-4">{parseText(project.description)}</div>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-purple-400 mb-1">Technologies:</h4>
+                <h4 className="text-xs font-semibold text-purple-400 mb-1">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech: any, i: any) => (
                     <span
@@ -57,8 +90,8 @@ export const ProjectCarousel = ({ projects }: { projects: any[] }) => {
               </div>
 
               <div className="mb-4">
-                <span className="text-sm font-semibold text-purple-400">Concepts:</span>
-                <span className="text-sm text-gray-300 ml-2">{project.type}</span>
+                <span className="text-xs font-semibold text-purple-400">Concepts:</span>
+                <span className="text-xs text-gray-300 ml-2">{project.type}</span>
               </div>
 
               {project.githubLink && (
@@ -66,7 +99,7 @@ export const ProjectCarousel = ({ projects }: { projects: any[] }) => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                  className="inline-flex items-center text-sm text-purple-400 hover:text-purple-300 transition-colors"
                 >
                   <FiGithub className="mr-2" />
                   View on GitHub
@@ -106,3 +139,5 @@ export const ProjectCarousel = ({ projects }: { projects: any[] }) => {
     </div>
   );
 };
+
+export default ProjectCarousel;

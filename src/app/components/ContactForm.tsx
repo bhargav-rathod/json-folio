@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FiCheckCircle, FiAlertCircle, FiSend } from "react-icons/fi";
+import { ContactFormProps } from "../types/portfolio-data.type";
 
 const ContactForm = ({
   emailJsConfig,

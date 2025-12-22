@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 // Define types for the Navbar props
 interface NavItem {
   label: string;
   section: string;
+  navEligibleForDesktop?: boolean;
+  navEligibleForMobile?: boolean;
 }
 
 interface SocialLink {
@@ -31,12 +34,19 @@ const iconComponents: { [key: string]: any } = {
   FiLinkedin: require("react-icons/fi").FiLinkedin,
   FiTwitter: require("react-icons/fi").FiTwitter,
   FiMail: require("react-icons/fi").FiMail,
-  SiLeetcode: require("react-icons/si").SiLeetcode
+  SiLeetcode: require("react-icons/si").SiLeetcode,
+  FaGraduationCap: require("react-icons/fa").FaGraduationCap,
+  FaKaggle: require("react-icons/fa").FaKaggle,
+  SiStackoverflow: require("react-icons/si").SiStackoverflow,
+  SiMedium: require("react-icons/si").SiMedium,
+  FaDev: require("react-icons/fa").FaDev
 };
 
 const Navbar = ({ activeSection, logo, navLinks, socialLinks }: NavbarProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const desktopLinks = navLinks.filter((link) => link.navEligibleForDesktop);
+  const mobileLinks = navLinks.filter((link) => link.navEligibleForMobile);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +55,17 @@ const Navbar = ({ activeSection, logo, navLinks, socialLinks }: NavbarProps) => 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md border-b border-gray-800" : "bg-transparent"}`}>
@@ -64,7 +85,7 @@ const Navbar = ({ activeSection, logo, navLinks, socialLinks }: NavbarProps) => 
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-1">
-            {navLinks.map((item) => {
+            {desktopLinks.map((item) => {
               const isActive = activeSection === item.section;
               return (
                 <motion.div
@@ -142,57 +163,67 @@ const Navbar = ({ activeSection, logo, navLinks, socialLinks }: NavbarProps) => 
       {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-gray-900/95 backdrop-blur-lg overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-2">
-              {navLinks.map((item) => {
-                const isActive = activeSection === item.section;
-                return (
-                  <motion.a
-                    key={item.section}
-                    href={`#${item.section}`}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${isActive ? "bg-gray-800 text-white" : "text-gray-300 hover:bg-gray-800 hover:text-white"}`}
-                    onClick={() => setMenuOpen(false)}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {item.label}
-                    {isActive && (
-                      <motion.div
-                        layoutId="mobileNavIndicator"
-                        className="h-0.5 bg-gradient-to-r from-purple-400 to-pink-600 mt-1"
-                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      />
-                    )}
-                  </motion.a>
-                );
-              })}
-              
-              <div className="flex justify-center gap-4 pt-4">
-                {socialLinks.map((social) => {
-                  const IconComponent = iconComponents[social.icon];
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 text-gray-300 hover:text-purple-400 transition-colors"
-                      aria-label={social.name}
-                    >
-                      {IconComponent && <IconComponent className="w-6 h-6" />}
-                    </a>
-                  );
-                })}
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden fixed inset-0 z-30 bg-black/40 backdrop-blur-sm"
+              onClick={() => setMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="md:hidden fixed top-16 left-0 right-0 z-40"
+            >
+              <div className="mx-4 rounded-2xl border border-gray-800 bg-gray-900/95 shadow-2xl shadow-black/30 overflow-hidden">
+                <div className="p-4 space-y-3">
+                  {mobileLinks.map((item, idx) => {
+                    const isActive = activeSection === item.section;
+                    return (
+                      <motion.a
+                        key={item.section}
+                        href={`#${item.section}`}
+                        onClick={() => setMenuOpen(false)}
+                        className={`flex items-center justify-between rounded-xl border px-4 py-3 text-sm font-medium transition-colors ${
+                          isActive
+                            ? "border-purple-500/70 bg-purple-500/10 text-white"
+                            : "border-gray-800 bg-gray-900/70 text-gray-300 hover:border-purple-500/40 hover:text-white"
+                        }`}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.03 * idx }}
+                      >
+                        <span>{item.label}</span>
+                        <FiArrowUpRight className="h-4 w-4 text-purple-400" />
+                      </motion.a>
+                    );
+                  })}
+
+                  <div className="flex justify-center gap-3 pt-2">
+                    {socialLinks.map((social) => {
+                      const IconComponent = iconComponents[social.icon];
+                      return (
+                        <a
+                          key={social.name}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-10 w-10 items-center justify-center rounded-xl border border-gray-800 text-gray-300 transition hover:border-purple-500/50 hover:text-white"
+                          aria-label={social.name}
+                        >
+                          {IconComponent && <IconComponent className="h-5 w-5" />}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
