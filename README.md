@@ -12,14 +12,16 @@
 ## ✨ Features
 
 - **JSON-powered** - Just edit one file to customize your entire portfolio
+- **No-Redeployments** - Data change will not require redeployments
+- **Fully Customizable** - Fully Customizable - Sections, Sections Data & Sections Ordering 
 - **Blazing Fast** - Built with Next.js for optimal performance
 - **Mobile Responsive** - Looks great on all devices
 - **Modern Design** - Clean, professional aesthetics
 - **Easy Deployment** - One-click deploy to Netlify/Vercel
 - **SEO Optimized** - Ready for search engines
 - **Dark/Light Mode** - Automatic system preference detection
-- **No Redeployment** - Data change will not require redeployments
-
+- **Tracking** - Track who visits your portfolio
+- 
 ## 🛠️ Getting Started
 
 ### 1. Fork this repository
