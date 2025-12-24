@@ -21,7 +21,7 @@
 - **SEO Optimized** - Ready for search engines
 - **Dark/Light Mode** - Automatic system preference detection
 - **Tracking** - Track who visits your portfolio
-- 
+
 ## 🛠️ Getting Started
 
 ### 1. Fork this repository
