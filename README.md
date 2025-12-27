@@ -30,7 +30,7 @@ Click the "Fork" button at the top right of this page to create your own copy.
 
 ### 2. Set up your portfolio data
 
-Create a JSON file with your portfolio data (use [this template](https://gist.github.com/YOUR_TEMPLATE_LINK)) and host it somewhere (GitHub Gist, your own server, etc.).
+Create a JSON file with your portfolio data (use [this template](https://raw.githubusercontent.com/bhargav-rathod/json-folio/refs/heads/main/public/archived/data.json)) and host it somewhere (GitHub Gist, your own server, etc.).
 
 ### 3. Configure environment variable
 
@@ -52,7 +52,7 @@ Visit http://localhost:3000 to see your portfolio!
 
 
 ## Json Configuration
-For a complete example, check out the [sample portfolio.json](https://raw.githubusercontent.com/bhargav-rathod/json-folio/refs/heads/main/archived/data.json).
+For a complete example, check out the [sample portfolio.json](https://raw.githubusercontent.com/bhargav-rathod/json-folio/refs/heads/main/public/archived/data.json).
 
 ## 🤝 Contributing
 Contributions are welcome! Please open an issue or submit a PR for any improvements.
