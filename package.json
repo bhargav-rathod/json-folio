@@ -10,7 +10,7 @@
     "analyze": "BUNDLE_ANALYZE=true next build"
   },
   "dependencies": {
-    "next": "16.4.2",
+    "next": "16.4.3",
     "framer-motion": "^14.3.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
